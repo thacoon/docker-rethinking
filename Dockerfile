@@ -14,4 +14,7 @@ RUN apt-get update \
     && Rscript -e "install.packages('rstan', repos='https://cloud.r-project.org/', dependencies=TRUE)" \
     && Rscript -e "install.packages(c('coda', 'mvtnorm', 'devtools'))" \
     && Rscript -e "library('devtools'); devtools::install_github('rmcelreath/rethinking')" \
-    && rm -rf /tmp
+    && chmod 777 /tmp \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/ \
+    && rm -rf /tmp/*
