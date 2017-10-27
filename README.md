@@ -7,6 +7,9 @@ This installs the package needed for doing the exercises from the book "Statisti
 
 Visit `localhost:8787` in your browser and log in with username:password as `rstudio:rstudio`.
 
+### Name your coontainer
+`$ docker run -d -p 8787:8787 --name CHOOSE_A_NAME thacoon/docker-rethinking`
+
 ### Link a local volume to container
 
 `$ docker run -d -p 8787:8787 -v LOCAL_PATH:/home/rstudio thacoon/docker-rethinking`
